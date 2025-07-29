@@ -21,6 +21,9 @@ const Login = () => {
     if (res.ok) {
       const data = await res.json();
       localStorage.setItem('token', data.token); // Save token if returned
+      localStorage.setItem('username', formData.username);
+localStorage.setItem('user_id', '1'); // Replace with user ID if you have it
+navigate('/users');
       alert('Login successful');
       // Navigate to chat page later
     } else {
@@ -29,6 +32,7 @@ const Login = () => {
   };
 
   return (
+    
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-80">
         <h2 className="text-2xl font-bold mb-4 text-center text-blue-600">Login</h2>

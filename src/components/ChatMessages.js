@@ -19,9 +19,9 @@ const ChatMessages = ({ messages, currentUser }) => {
               }`}
             >
               <div className="text-sm font-semibold mb-1">
-                {msg.sender?.username || (isSender ? 'You' : 'User')}
+                {msg.sender?.username || (isSender ? 'You' : '')}
                 {msg.emotion && (
-                  <span className="ml-2 text-xs italic text-yellow-200">
+                  <span className="ml-2 text-xs italic text-black">
                     ({msg.emotion})
                   </span>
                 )}
